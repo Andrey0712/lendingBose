@@ -4,6 +4,9 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 22.4px;
 }
 /* #region heder*/
 .header {
@@ -23,8 +26,26 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.header_titel {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 800;
+  font-style: italic;
+  /* text-align: center; */
+  letter-spacing: -1.5px;
+}
 /* #endregion */
 .menu {
+  /* display: none; */
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translate(-100%);
+  transition: transform 500ms;
   box-sizing: border-box;
   height: 100vh;
   padding: 64px 120px;
@@ -36,6 +57,9 @@ body {
   
   padding: 64px 120px;
   background-color: #e8eff9; */
+}
+.menu:target {
+  transform: translate(-0%);
 }
 
 .menu-top {
@@ -58,8 +82,80 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-/* #endregion */
-
 section {
   height: 800px;
 }
+/* #endregion */
+
+.main {
+  padding: 120px;
+}
+/* #region recomended */
+.recommended {
+  margin-bottom: 120px;
+}
+.recomended_titel {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+.recomended_products {
+  /* width: 324px;
+  height: 438px; */
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+/* для розтягивания на весь екран */
+/* .product {
+  flex-grow: 1;
+} */
+.product {
+  width: 324px;
+  height: 438px;
+}
+.product_foto {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.product_titel {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.product_category {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.product_price {
+  margin-top: 0;
+  font-weight: bold;
+}
+/* #endregion */
+
+/* #region category */
+.categories_titel {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+/* #endregion */
+
+/* #region how to buy */
+.how-to-buy_titel {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: bold;
+  /* text-align: center; */
+  letter-spacing: -1.5px;
+}
+/* #endregion */
